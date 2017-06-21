@@ -1,0 +1,15 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+
+public class App1a {
+	
+	public static void main(String[] args) {
+		Movie movie = new Movie();
+		
+		ArrayList<Movie> data = movie.parseMovie("topmovies.csv");
+	}
+
+}

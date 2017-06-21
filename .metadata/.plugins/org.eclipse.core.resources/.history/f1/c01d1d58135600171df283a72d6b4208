@@ -1,0 +1,38 @@
+
+public class Movie {
+	private String name;
+	private String studio;
+	private double revenue;
+	private Integer year;
+	
+	
+	public void Movie(String name, String studio, double revenue, Integer year) {
+		this.name = name;
+		this.studio = studio;
+		this.revenue = revenue;
+		this.year = year;
+		return;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public String getStudio() {
+		return studio;
+	}
+
+
+	public double getRevenue() {
+		return revenue;
+	}
+
+
+	public Integer getYear() {
+		return year;
+	}
+	
+
+}
