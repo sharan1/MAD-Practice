@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">In Class 2a</string>
+    <string name="label_area_circle">Area of Circle</string>
+    <string name="label_area_triangle">Area of Triangle</string>
+    <string name="label_area_rect">Area of Rectangle</string>
+    <string name="label_area_square">Area of Square</string>
+    <string name="label_clear_all">Clear All</string>
+
+
+</resources>

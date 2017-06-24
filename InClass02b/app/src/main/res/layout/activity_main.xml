@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relFindArea"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sharangirdhani.inclass02b.MainActivity">
+
+    <TextView
+        android:id="@+id/l1Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="67dp"
+        android:text="Length1:"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/l2Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/length2"
+        android:layout_alignBottom="@+id/length2"
+        android:layout_toLeftOf="@+id/length1"
+        android:layout_toStartOf="@+id/length1"
+        android:text="Length2:"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/length1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/l1Text"
+        android:layout_alignBottom="@+id/l1Text"
+        android:layout_toRightOf="@+id/l1Text"
+        android:ems="10"
+        android:hint="    Enter Length "
+        android:inputType="textPersonName|numberDecimal" />
+
+    <EditText
+        android:id="@+id/length2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/length1"
+        android:layout_alignLeft="@+id/length1"
+        android:layout_alignRight="@+id/length1"
+        android:layout_alignStart="@+id/length1"
+        android:layout_below="@+id/l1Text"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="    Enter Length  "
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/areaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/l2Text"
+        android:layout_alignStart="@+id/l2Text"
+        android:layout_below="@+id/length2"
+        android:layout_marginTop="22dp"
+        android:text="Area"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/areaValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/length2"
+        android:layout_alignStart="@+id/length2"
+        android:layout_alignTop="@+id/areaText" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/areaText"
+        android:layout_alignStart="@+id/areaText"
+        android:layout_below="@+id/areaText"
+        android:checkedButton="@+id/radioClear"
+        android:visibility="visible">
+
+        <RadioButton
+            android:id="@+id/radioTriangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/areaText"
+            android:layout_alignStart="@+id/areaText"
+            android:layout_below="@+id/areaText"
+            android:layout_marginTop="26dp"
+            android:layout_weight="1"
+            android:text="Triangle" />
+
+        <RadioButton
+            android:id="@+id/radioSquare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/radioTriangle"
+            android:layout_alignStart="@+id/radioTriangle"
+            android:layout_below="@+id/radioTriangle"
+            android:layout_marginTop="11dp"
+            android:layout_weight="1"
+            android:text="Square" />
+
+        <RadioButton
+            android:id="@+id/radioCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/radioSquare"
+            android:layout_alignStart="@+id/radioSquare"
+            android:layout_below="@+id/radioSquare"
+            android:layout_marginTop="11dp"
+            android:layout_weight="1"
+            android:text="Circle" />
+
+        <RadioButton
+            android:id="@+id/radioRect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/radioCircle"
+            android:layout_alignStart="@+id/radioCircle"
+            android:layout_below="@+id/radioCircle"
+            android:layout_marginTop="11dp"
+            android:layout_weight="1"
+            android:text="Rectangle" />
+
+        <RadioButton
+            android:id="@+id/radioClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/radioRect"
+            android:layout_alignStart="@+id/radioRect"
+            android:layout_below="@+id/radioRect"
+            android:layout_marginTop="11dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="Clear All" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:text="Calculate"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/radioGroup"
+        android:layout_alignStart="@+id/radioGroup"
+        android:layout_alignRight="@+id/length2"
+        android:layout_alignEnd="@+id/length2"
+        android:onClick="onClick"/>
+
+</android.widget.RelativeLayout>
