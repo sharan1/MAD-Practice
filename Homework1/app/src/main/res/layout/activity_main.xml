@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sharangirdhani.homework1.MainActivity">
+
+    <TextView
+        android:id="@+id/weightText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/weightValue"
+        android:layout_alignBottom="@+id/weightValue"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp"
+        android:text="@string/weight_text"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/weightValue"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="11dp"
+        android:layout_toEndOf="@+id/weightText"
+        android:layout_toRightOf="@+id/weightText"
+        android:ems="10"
+        android:hint="@string/weight_hint"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/genderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/weightValue"
+        android:layout_alignBottom="@+id/weightValue"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_toLeftOf="@+id/switchGender"
+        android:layout_toStartOf="@+id/switchGender"
+        android:text="@string/gender_text" />
+
+    <Switch
+        android:id="@+id/switchGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/genderText"
+        android:layout_alignBottom="@+id/genderText"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/switchGender"
+        android:layout_alignLeft="@+id/weightText"
+        android:layout_alignRight="@+id/switchGender"
+        android:layout_alignStart="@+id/weightText"
+        android:layout_below="@+id/weightValue"
+        android:layout_marginTop="25dp"
+        android:onClick="saveOnClick"
+        android:text="@string/save_button" />
+
+    <TextView
+        android:id="@+id/drinkText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonSave"
+        android:layout_alignStart="@+id/buttonSave"
+        android:layout_below="@+id/buttonSave"
+        android:layout_marginTop="58dp"
+        android:text="@string/radioGroup_text"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/drinkText"
+        android:layout_alignEnd="@+id/buttonSave"
+        android:layout_alignRight="@+id/buttonSave"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio1oz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/drinkText"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_toLeftOf="@+id/radio5oz"
+            android:layout_toStartOf="@+id/radio5oz"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="1 oz      " />
+
+
+        <RadioButton
+            android:id="@+id/radio5oz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/radio1oz"
+            android:layout_alignBottom="@+id/radio1oz"
+            android:layout_toEndOf="@+id/weightValue"
+            android:layout_toRightOf="@+id/weightValue"
+            android:text="5 oz     " />
+
+        <RadioButton
+            android:id="@+id/radio12oz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/radio5oz"
+            android:layout_alignBottom="@+id/radio5oz"
+            android:layout_alignEnd="@+id/buttonSave"
+            android:layout_alignRight="@+id/buttonSave"
+            android:layout_weight="1"
+            android:text="12 oz    " />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/alcoholText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/drinkText"
+        android:layout_alignStart="@+id/drinkText"
+        android:layout_below="@+id/drinkText"
+        android:layout_marginTop="21dp"
+        android:text="@string/alcohol_scale_text"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <SeekBar
+        android:id="@+id/sliderAlcoholValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/alcoholText"
+        android:layout_alignLeft="@+id/weightValue"
+        android:layout_alignStart="@+id/weightValue"
+        android:layout_toLeftOf="@+id/curAlcoholValue"
+        android:layout_toStartOf="@+id/curAlcoholValue"
+        android:tickMark="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/buttonAddDrink"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:text="@string/add_drink_button"
+        android:layout_below="@+id/alcoholText"
+        android:layout_alignLeft="@+id/alcoholText"
+        android:layout_alignStart="@+id/alcoholText"
+        android:onClick="addDrinkOnClick"/>
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/reset_button"
+        android:layout_above="@+id/bacText"
+        android:layout_alignRight="@+id/curAlcoholValue"
+        android:layout_alignEnd="@+id/curAlcoholValue"
+        android:onClick="resetOnClick" />
+
+    <TextView
+        android:id="@+id/bacText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:text="@string/bac_level_text"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:layout_below="@+id/buttonAddDrink"
+        android:layout_toRightOf="@+id/weightText"
+        android:layout_toEndOf="@+id/weightText" />
+
+    <TextView
+        android:id="@+id/bacValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bacText"
+        android:layout_alignBottom="@+id/bacText"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_toEndOf="@+id/bacText"
+        android:layout_toRightOf="@+id/bacText"
+        android:text="0.00"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/curAlcoholValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/sliderAlcoholValue"
+        android:layout_alignEnd="@+id/radioGroup"
+        android:layout_alignRight="@+id/radioGroup"
+        android:text="5%"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <ProgressBar
+        android:id="@+id/progressStatus"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonAddDrink"
+        android:layout_alignStart="@+id/buttonAddDrink"
+        android:layout_below="@+id/bacText"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="33dp"
+        android:layout_toStartOf="@+id/curAlcoholValue"
+        android:indeterminate="false"
+        android:max="1"
+        android:progress="0"
+        android:visibility="visible"
+        android:layout_alignRight="@+id/buttonReset"
+        android:layout_alignEnd="@+id/buttonReset" />
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/status_text"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/progressStatus"
+        android:layout_alignLeft="@+id/sliderAlcoholValue"
+        android:layout_alignStart="@+id/sliderAlcoholValue" />
+
+    <TextView
+        android:id="@+id/statusValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_dark"
+        android:text="You're safe"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/statusText"
+        android:layout_alignLeft="@+id/buttonReset"
+        android:layout_alignStart="@+id/buttonReset" />
+
+</android.widget.RelativeLayout>
