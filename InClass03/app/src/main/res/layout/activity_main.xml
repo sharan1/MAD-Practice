@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sharangirdhani.inclass03.MainActivity">
+
+    <EditText
+        android:id="@+id/value_name"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="@string/hint_name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/value_email"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/value_name"
+        android:layout_alignStart="@+id/value_name"
+        android:layout_below="@+id/value_name"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="@string/hint_email"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/text_department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/value_email"
+        android:layout_alignStart="@+id/value_email"
+        android:layout_below="@+id/value_email"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/head_department"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/text_department"
+        android:layout_alignStart="@+id/text_department"
+        android:layout_centerVertical="true"
+        android:checkedButton="@+id/radio_dep_1">
+
+        <RadioButton
+            android:id="@+id/radio_dep_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/text_department"
+            android:layout_alignStart="@+id/text_department"
+            android:layout_below="@+id/text_department"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="@string/dep_1" />
+
+        <RadioButton
+            android:id="@+id/radio_dep_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/radio_dep_1"
+            android:layout_alignStart="@+id/radio_dep_1"
+            android:layout_below="@+id/radio_dep_1"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:text="@string/dep_2" />
+
+        <RadioButton
+            android:id="@+id/radio_dep_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/radio_dep_2"
+            android:layout_alignStart="@+id/radio_dep_2"
+            android:layout_below="@+id/radio_dep_2"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="@string/dep_3" />
+
+        <RadioButton
+            android:id="@+id/radio_dep_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/radio_dep_3"
+            android:layout_alignStart="@+id/radio_dep_3"
+            android:layout_below="@+id/radio_dep_3"
+            android:layout_marginTop="11dp"
+            android:layout_weight="1"
+            android:text="@string/dep_4" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/text_mood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioGroup"
+        android:layout_alignStart="@+id/radioGroup"
+        android:layout_below="@+id/radioGroup"
+        android:layout_marginTop="23dp"
+        android:text="@string/head_mood"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <SeekBar
+        android:id="@+id/value_mood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/value_email"
+        android:layout_alignLeft="@+id/text_mood"
+        android:layout_alignRight="@+id/value_email"
+        android:layout_alignStart="@+id/text_mood"
+        android:layout_below="@+id/text_mood"
+        android:layout_marginTop="14dp"
+        android:max="100"
+        android:tickMark="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/value_mood"
+        android:layout_alignLeft="@+id/value_mood"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/value_mood"
+        android:layout_alignStart="@+id/value_mood"
+        android:layout_marginBottom="17dp"
+        android:text="@string/btn_submit" />
+
+</RelativeLayout>

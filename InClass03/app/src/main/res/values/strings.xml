@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Main Activity</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_email">Email</string>
+    <string name="head_department">Department:</string>
+    <string name="dep_1">SIS</string>
+    <string name="dep_2">CS</string>
+    <string name="dep_3">BIO</string>
+    <string name="dep_4">Others</string>
+    <string name="head_mood">Your current mood:</string>
+    <string name="btn_submit">Submit</string>
+    <string name="activity_display">Display Activity</string>
+    <string name="head_student_info">Student Information</string>
+    <string name="view_name">Name:</string>
+    <string name="view_email">Email:</string>
+    <string name="view_department">Department:</string>
+    <string name="view_mood">Mood:</string>
+    <string name="head_edit_info">Edit Information</string>
+    <string name="activity_edit">Edit Activity</string>
+    <string name="btn_save">Save</string>
+    <string name="toast_error_1">Set both Name and Email Values</string>
+</resources>

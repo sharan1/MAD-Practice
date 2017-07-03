@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sharangirdhani.inclass03.DisplayActivity">
+
+    <TextView
+        android:id="@+id/head_student_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="@string/head_student_info"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/view_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head_student_info"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="38dp"
+        android:layout_toLeftOf="@+id/head_student_info"
+        android:text="@string/view_name"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/view_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_alignLeft="@+id/view_name"
+        android:layout_alignStart="@+id/view_name"
+        android:layout_below="@+id/view_name"
+        android:layout_marginTop="32dp"
+        android:text="@string/view_email"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/view_department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:layout_alignLeft="@+id/view_email"
+        android:layout_alignStart="@+id/view_email"
+        android:layout_below="@+id/view_email"
+        android:layout_marginTop="32dp"
+        android:text="@string/view_department"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/view_mood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:layout_alignLeft="@+id/view_department"
+        android:layout_alignStart="@+id/view_department"
+        android:layout_below="@+id/view_department"
+        android:layout_marginTop="32dp"
+        android:text="@string/view_mood"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/view_name"
+        android:layout_alignBottom="@+id/view_name"
+        android:layout_toEndOf="@+id/view_name"
+        android:layout_toRightOf="@+id/view_name"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/text_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/view_email"
+        android:layout_alignBottom="@+id/view_email"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/text_name"
+        android:layout_above="@+id/text_department"
+        android:layout_toRightOf="@+id/view_email"
+        android:layout_toEndOf="@+id/view_email" />
+
+    <TextView
+        android:id="@+id/text_department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/view_department"
+        android:layout_alignBottom="@+id/view_department"
+        android:layout_toEndOf="@+id/view_department"
+        android:layout_toRightOf="@+id/view_department"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/text_mood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/view_mood"
+        android:layout_alignBottom="@+id/view_mood"
+        android:layout_toEndOf="@+id/view_mood"
+        android:layout_toRightOf="@+id/view_department"
+        android:textColor="@android:color/black" />
+
+    <ImageView
+        android:id="@+id/imageEdit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text_name"
+        app:srcCompat="@drawable/ic_action_edit"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/text_name" />
+
+    <ImageView
+        android:id="@+id/imageEdit_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_action_edit"
+        android:layout_above="@+id/view_department"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/text_email"
+        android:layout_alignLeft="@+id/imageEdit_name"
+        android:layout_alignStart="@+id/imageEdit_name" />
+
+    <ImageView
+        android:id="@+id/imageEdit_department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text_department"
+        app:srcCompat="@drawable/ic_action_edit"
+        android:layout_alignBottom="@+id/text_department"
+        android:layout_alignLeft="@+id/imageEdit_email"
+        android:layout_alignStart="@+id/imageEdit_email" />
+
+    <ImageView
+        android:id="@+id/imageEdit_mood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/text_mood"
+        android:layout_alignLeft="@+id/imageEdit_department"
+        android:layout_alignStart="@+id/imageEdit_department"
+        android:layout_alignTop="@+id/text_mood"
+        app:srcCompat="@drawable/ic_action_edit" />
+
+</RelativeLayout>
