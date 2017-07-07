@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sharangirdhani.homework2.AddExpenseActivity">
+
+    <TextView
+        android:id="@+id/tvAddExpenseHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="@string/add_expense_heading"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tvExpenseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="@string/expense_name"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_below="@+id/tvAddExpenseHeading"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/etExpenseName"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvExpenseName"
+        android:layout_alignStart="@+id/tvExpenseName"
+        android:layout_below="@+id/tvExpenseName"
+        android:ems="10"
+        android:hint="@string/hint_expense_name"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="@string/tv_category"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/etExpenseName"
+        android:layout_alignLeft="@+id/etExpenseName"
+        android:layout_alignStart="@+id/etExpenseName" />
+
+    <Spinner
+        android:id="@+id/spinnerCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/etExpenseName"
+        android:layout_alignLeft="@+id/tvCategory"
+        android:layout_alignRight="@+id/etExpenseName"
+        android:layout_alignStart="@+id/tvCategory"
+        android:layout_below="@+id/tvCategory"
+        android:layout_marginTop="19dp" />
+
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinnerCategory"
+        android:layout_alignStart="@+id/spinnerCategory"
+        android:layout_below="@+id/spinnerCategory"
+        android:layout_marginTop="16dp"
+        android:text="@string/tv_amount"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/etAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvAmount"
+        android:layout_alignStart="@+id/tvAmount"
+        android:layout_below="@+id/tvAmount"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_alignRight="@+id/spinnerCategory"
+        android:layout_alignEnd="@+id/spinnerCategory" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_date"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/etAmount"
+        android:layout_alignLeft="@+id/etAmount"
+        android:layout_alignStart="@+id/etAmount" />
+
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/etAmount"
+        android:layout_alignLeft="@+id/tvDate"
+        android:layout_alignRight="@+id/etAmount"
+        android:layout_alignStart="@+id/tvDate"
+        android:layout_below="@+id/tvDate"
+        android:ems="10"
+        android:inputType="date"
+        android:textColor="@android:color/black" />
+
+    <ImageButton
+        android:id="@+id/imageCalender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/etDate"
+        android:layout_alignTop="@+id/tvDate"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_toEndOf="@+id/tvAddExpenseHeading"
+        android:layout_toRightOf="@+id/tvAddExpenseHeading"
+        app:srcCompat="@drawable/calendar" />
+
+    <TextView
+        android:id="@+id/tvReciept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="@string/tv_reciept"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/etDate"
+        android:layout_alignLeft="@+id/etDate"
+        android:layout_alignStart="@+id/etDate" />
+
+    <ImageButton
+        android:id="@+id/imageReciept"
+        android:layout_width="55dp"
+        android:layout_height="35dp"
+        android:layout_alignLeft="@+id/tvReciept"
+        android:layout_alignStart="@+id/tvReciept"
+        android:layout_below="@+id/tvReciept"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/search" />
+
+    <Button
+        android:id="@+id/btnAddExpenseSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvAddExpenseHeading"
+        android:layout_alignStart="@+id/tvAddExpenseHeading"
+        android:layout_below="@+id/imageReciept"
+        android:layout_marginTop="19dp"
+        android:text="@string/btn_add_expense" />
+</RelativeLayout>

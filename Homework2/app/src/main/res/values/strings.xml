@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Expense App</string>
+    <string name="btn_add_expense">Add Expense</string>
+    <string name="btn_edit_expense">Edit Expense</string>
+    <string name="btn_delete_expense">Delete Expense</string>
+    <string name="btn_show_expenses">Show Expenses</string>
+    <string name="btn_finish">Finish</string>
+    <string name="add_expense_heading">Add An Expense</string>
+    <string name="expense_name">Expense Name</string>
+    <string name="hint_expense_name">Phone Bill</string>
+    <string name="tv_category">Category</string>
+    <string name="tv_amount">Amount</string>
+    <string name="tv_date">Date</string>
+    <string name="tv_reciept">Reciept</string>
+</resources>
