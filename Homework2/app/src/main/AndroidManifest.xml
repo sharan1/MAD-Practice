@@ -19,7 +19,16 @@
         </activity>
         <activity
             android:name=".AddExpenseActivity"
-            android:label="@string/btn_add_expense"></activity>
+            android:label="@string/btn_add_expense" />
+        <activity
+            android:name=".EditExpenseActivity"
+            android:label="@string/btn_edit_expense"/>
+        <activity
+            android:name=".DeleteExpenseActivity"
+            android:label="@string/btn_delete_expense"/>
+        <activity
+            android:name=".ShowExpensesActivity"
+            android:label="@string/btn_show_expenses"></activity>
     </application>
 
 </manifest>

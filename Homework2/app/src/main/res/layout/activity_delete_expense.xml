@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sharangirdhani.homework2.AddExpenseActivity">
+    tools:context="com.example.sharangirdhani.homework2.DeleteExpenseActivity">
 
-    <TextView
-        android:id="@+id/tvAddExpenseHeading"
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
-        android:text="@string/add_expense_heading"
-        android:textColor="@android:color/black"
-        android:textStyle="bold"
+        android:text="@string/button_label_select_expense"
+        android:id="@+id/btnSelectExpense"
+        android:layout_gravity="center_horizontal"
+        android:onClick="selectExpense"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -24,11 +23,11 @@
         android:layout_marginTop="17dp"
         android:text="@string/expense_name"
         android:textColor="@android:color/black"
-        android:layout_marginLeft="23dp"
-        android:layout_marginStart="23dp"
-        android:layout_below="@+id/tvAddExpenseHeading"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/btnSelectExpense"
+        android:layout_toLeftOf="@+id/btnSelectExpense"
+        android:layout_toStartOf="@+id/btnSelectExpense"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp" />
 
     <EditText
         android:id="@+id/etExpenseName"
@@ -56,7 +55,6 @@
         android:id="@+id/spinnerCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
         android:layout_below="@+id/tvCategory"
         android:layout_alignLeft="@+id/tvCategory"
         android:layout_alignStart="@+id/tvCategory"
@@ -132,22 +130,11 @@
         android:layout_alignLeft="@+id/etDate"
         android:layout_alignStart="@+id/etDate" />
 
-    <Button
-        android:id="@+id/btnAddExpenseSubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_add_expense"
-        android:layout_marginBottom="33dp"
-        android:onClick="addExpense"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/tvAddExpenseHeading"
-        android:layout_alignStart="@+id/tvAddExpenseHeading" />
 
     <ImageView
         android:id="@+id/imageReciept"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btnAddExpenseSubmit"
         android:layout_alignEnd="@+id/tvAmount"
         android:layout_alignLeft="@+id/tvReciept"
         android:layout_alignRight="@+id/tvAmount"
@@ -156,4 +143,29 @@
         app:srcCompat="@drawable/search"
         tools:ignore="ContentDescription"
         android:onClick="getImage" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="deleteExpense"
+        android:text="@string/btnDelete"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/imageReciept"
+        android:layout_toEndOf="@+id/imageReciept"
+        android:layout_marginBottom="39dp" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_cancel"
+        android:onClick="finishActivity"
+        android:layout_alignBaseline="@+id/btnDelete"
+        android:layout_alignBottom="@+id/btnDelete"
+        android:layout_toLeftOf="@+id/imageCalender"
+        android:layout_toStartOf="@+id/imageCalender"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp" />
+
 </RelativeLayout>

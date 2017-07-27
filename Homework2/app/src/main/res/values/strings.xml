@@ -12,4 +12,21 @@
     <string name="tv_amount">Amount</string>
     <string name="tv_date">Date</string>
     <string name="tv_reciept">Reciept</string>
+    <string name="toast_expense_added_label">Expense is Added</string>
+    <string name="toast_expense_deleted_label">Expense is Deleted</string>
+    <string name="toast_expense_updated_label">Expense is Edited</string>
+    <string name="button_label_select_expense">Select Expense</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btnSave">Save</string>
+    <string name="alert_title_Pick_Expense">Pick an Expense</string>
+    <string name="no_expense_lable">There are no expense to show.</string>
+    <string name="toast_no_expense_selected">No Expense Selected</string>
+    <string name="btnDelete">Delete</string>
+    <string name="button_label_Finish">Finish</string>
+    <string name="expense_receipt_label">Receipt</string>
+    <string name="text_label_Date">Date</string>
+    <string name="text_label_Amount">Amount</string>
+    <string name="text_label_Category">Category</string>
+    <string name="text_label_Name">Name</string>
+    <string name="text_label_Details">Expense Details</string>
 </resources>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sharangirdhani.inclass04.MainActivity">
+
+    <TextView
+        android:id="@+id/select_password_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="39dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/select_password_count"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/password_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/select_password_count"
+        android:layout_marginLeft="41dp"
+        android:layout_marginStart="41dp"
+        android:layout_toEndOf="@+id/select_password_count"
+        android:layout_toRightOf="@+id/select_password_count"
+        android:text="1"
+        android:textColor="@android:color/black"
+        android:textSize="22sp" />
+
+    <SeekBar
+        android:id="@+id/seekBar_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/select_password_count"
+        android:layout_alignStart="@+id/select_password_count"
+        android:layout_below="@+id/select_password_count"
+        android:layout_marginTop="22dp"
+        android:layout_toLeftOf="@+id/password_count"
+        android:layout_toStartOf="@+id/password_count"
+        android:max="9"
+        android:progress="0" />
+
+    <TextView
+        android:id="@+id/select_password_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/select_password_length"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/seekBar_count"
+        android:layout_alignLeft="@+id/seekBar_count"
+        android:layout_alignStart="@+id/seekBar_count" />
+
+    <TextView
+        android:id="@+id/password_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/select_password_length"
+        android:layout_alignLeft="@+id/password_count"
+        android:layout_alignStart="@+id/password_count"
+        android:text="8"
+        android:textColor="@android:color/black"
+        android:textSize="22sp" />
+
+    <SeekBar
+        android:id="@+id/seekBar_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/select_password_length"
+        android:layout_alignStart="@+id/select_password_length"
+        android:layout_below="@+id/select_password_length"
+        android:layout_marginTop="20dp"
+        android:max="15"
+        android:progress="0"
+        android:layout_alignRight="@+id/seekBar_count"
+        android:layout_alignEnd="@+id/seekBar_count" />
+
+    <TextView
+        android:id="@+id/password_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/seekBar_length"
+        android:layout_alignLeft="@+id/seekBar_length"
+        android:layout_alignStart="@+id/seekBar_length"
+        android:layout_marginTop="44dp" />
+
+    <TextView
+        android:id="@+id/password_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/password_text"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/password_text"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/btn_password_thread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/password_text"
+        android:layout_alignStart="@+id/password_text"
+        android:layout_below="@+id/password_text"
+        android:layout_marginTop="52dp"
+        android:text="@string/btn_thread"
+        android:textStyle="bold"
+        android:layout_toLeftOf="@+id/password_length"
+        android:layout_toStartOf="@+id/password_length" />
+
+    <Button
+        android:id="@+id/btn_async"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btn_password_thread"
+        android:layout_alignLeft="@+id/btn_password_thread"
+        android:layout_alignRight="@+id/btn_password_thread"
+        android:layout_alignStart="@+id/btn_password_thread"
+        android:layout_below="@+id/btn_password_thread"
+        android:layout_marginTop="19dp"
+        android:text="@string/btn_async"
+        android:textStyle="bold" />
+
+</RelativeLayout>

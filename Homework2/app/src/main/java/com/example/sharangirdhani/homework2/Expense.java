@@ -2,6 +2,8 @@ package com.example.sharangirdhani.homework2;
 
 import android.net.Uri;
 
+import java.io.Serializable;
+import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -10,65 +12,75 @@ import java.util.Date;
  * Created by sharangirdhani on 7/6/17.
  */
 
-public class Expense {
-    String Name;
-    int categoryId;
-    int amount;
-    Date date;
-    Uri recipt;
+public class Expense implements Serializable{
+    public static DateFormat dateFormat = java.text.DateFormat.getDateInstance(DateFormat.DATE_FIELD);
 
-    public Expense(String name, int categoryId, int amount, Date date, Uri recipt) {
+    private String Name;
+    private int categoryId;
+    private int amount;
+    private Date date;
+    private String receipt;
+
+    public Expense(String name, int categoryId, int amount, Date date, String receipt) {
         this.Name = name;
         this.categoryId = categoryId;
         this.amount = amount;
         this.date = date;
-        this.recipt = recipt;
+        this.receipt = receipt;
     }
 
     public String getName() {
-        return Name;
+        return this.Name;
     }
 
     public int getCategoryId() {
-        return categoryId;
+        return this.categoryId;
     }
 
     public int getAmount() {
-        return amount;
+        return this.amount;
     }
 
     public Date getDate() {
-        return date;
+        return this.date;
     }
 
-    public Uri getRecipt() {
-        return recipt;
+    public String getReceipt() {
+        return this.receipt;
     }
 
     public String getCategoryNameById(int categoryId) {
         switch (categoryId) {
-            case 0:
-                return "Groceries";
             case 1:
-                return "Invoice";
+                return "Groceries";
             case 2:
-                return "Transportation";
+                return "Invoice";
             case 3:
-                return "Shopping";
+                return "Transportation";
             case 4:
-                return "Rent";
+                return "Shopping";
             case 5:
-                return "Trips";
+                return "Rent";
             case 6:
-                return "Utilities";
+                return "Trips";
             case 7:
+                return "Utilities";
+            case 8:
                 return "Other";
         }
-        return "Other";
+        return null;
     }
 
-    public ArrayList<String> getCategoryList() {
-        ArrayList<String> list = new ArrayList<>(Arrays.asList("Groceries", "Invoice", "Transportation", "Shopping", "Rent", "Trips", "Utilities", "Other"));
-        return list;
-    }
+    // Static categories
+    public static String[] categories = {
+            "Select a category",
+            "Groceries",
+            "Invoice",
+            "Transportation",
+            "Shopping",
+            "Rent",
+            "Trip",
+            "Utilities",
+            "Others"
+    };
 }
